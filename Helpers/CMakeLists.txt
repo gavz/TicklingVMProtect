@@ -1,0 +1,7 @@
+set(CLANG_EXECUTABLE ${LLVM_TOOLS_BINARY_DIR}/clang++${CMAKE_EXECUTABLE_SUFFIX})
+
+if(NOT EXISTS ${CLANG_EXECUTABLE})
+	message(FATAL_ERROR "Could not find ${CLANG_EXECUTABLE}")
+endif()
+
+add_subdirectory(VMProtect)
